@@ -39,5 +39,5 @@
 }
 </style>
 <script setup>
-import TrendArea from './TrendArea.vue';
+import TrendArea from '@/views/Home/TrendArea.vue';
 </script>
