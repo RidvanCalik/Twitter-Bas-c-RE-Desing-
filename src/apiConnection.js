@@ -2,6 +2,9 @@ import axios from "axios";
 
 var apiConnection = {
     apiUrl: "http://localhost:3001/api",
+    isConnection: async function () {
+        return axios.get(this.apiUrl).then((x) => { return true; }).catch(() => { return false; });
+    },
     getTrends: async function () {
         return axios.get(this.apiUrl + "/trends").then((x) => { return x; });
     },

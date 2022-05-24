@@ -1,7 +1,7 @@
 <template>
     <div class="container p-4">
-        <LoadingSpinner v-if="!post"></LoadingSpinner>
-        <div v-else class="card shadow p-3 m-2" v-for="p in post">
+
+        <div class="card shadow p-3 m-2" v-for="p in post">
             <div class="card-body">
                 <div class="row">
                     <div class="col-2">
@@ -11,7 +11,7 @@
                         <h6 class="card-title text-primary">{{ p.postTag.map((x) => { return "#" + x }).toString() }}
                         </h6>
                         <p class="card-text m-2">{{ p.post }}</p>
-                        <i class="bi bi-heart" @click="like" :data="p.id"></i>
+
 
                         <h6 class="card-subtitle mb-2 text-muted">{{ p.postDate }}</h6>
                     </div>
@@ -24,7 +24,7 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import apiConnection from '@/apiConnection';
-import LoadingSpinner from '../components/LoadingSpinner.vue';
+
 function like(x) {
     console.log(x);
 }

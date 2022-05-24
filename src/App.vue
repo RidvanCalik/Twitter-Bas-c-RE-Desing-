@@ -6,17 +6,22 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import TrendArea from "./views/TrendArea.vue";
 import HeaderArea from './views/HeaderArea.vue';
 import MainArea from './views/MainArea.vue';
-var showLoading = true;
+import LoadingSpinnerVue from './components/LoadingSpinner.vue';
+import apiConnection from '@/apiConnection';
+var dataİsLoad = ref(false);
 
 onMounted(function () {
-  console.log("aaaa");
+
+  apiConnection.isConnection().then(function (x) { dataİsLoad.value = x; });
 });
 
 
 </script>
 
 <template >
-  <div class="row h-100 ">
+
+  <LoadingSpinnerVue v-if="!dataİsLoad"></LoadingSpinnerVue>
+  <div class="row h-100 " v-else>
 
     <div class=" d-none d-md-block col-md-2 ">
       <TrendArea>
@@ -26,6 +31,7 @@ onMounted(function () {
 
     <div class=" col-12 col-md-10 ">
       <div class="row" id="headerArea">
+
         <HeaderArea></HeaderArea>
       </div>
       <div class="row" id="mainArea">

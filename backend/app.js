@@ -25,7 +25,14 @@ let data = [
         id: 3
     }
 ]
+app.get('/api', cors(corsOptions), (request, response) => {
+    if (data.length > 0) {
+        response.json(true);
+    } else {
+        response.json(false);
+    }
 
+})
 app.get('/api/trends', cors(corsOptions), (request, response) => {
     var reData = [];
     data.forEach(function (element) {
