@@ -1,4 +1,4 @@
-# SocialMedia like a twitter clone but this better than :)
+# Twitter clone with Vue but this better than :)
 
 This template should help get you started developing with Vue 3 in Vite.
 
