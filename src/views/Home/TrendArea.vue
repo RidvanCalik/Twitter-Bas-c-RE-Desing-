@@ -1,4 +1,19 @@
+
+<script setup>
+import { onMounted, ref } from 'vue';
+import apiConnection from '@/apiConnection';
+
+var trends = ref([]);
+onMounted(() => {
+
+    console.log("dsfasd");
+    apiConnection.getTrends().then((x) => { console.log(x); }).catch(function (err) { trends.value = false; });
+
+})
+</script>
+
 <template>
+
     <div class="h-100 d-flex align-items-center justify-content-center  p-2">
 
         <ul class="list-group w-100 shadow-lg ">
@@ -7,19 +22,6 @@
         </ul>
     </div>
 
+
 </template>
 
-<script setup>
-import { onMounted, ref } from 'vue';
-import apiConnection from '@/apiConnection';
-
-
-var trends = ref([]);
-onMounted(() => {
-    apiConnection.getTrends().then((x) => { trends.value = x.data; }).catch(function (err) { trends.value = false; });
-
-})
-
-
-
-</script>

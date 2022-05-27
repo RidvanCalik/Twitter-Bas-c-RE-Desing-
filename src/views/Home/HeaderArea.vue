@@ -17,10 +17,10 @@
     </div>
     <!--modal trends for mobile-->
 
-    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog  modal-dialog-centered">
             <div class="modal-content">
-                <TrendArea></TrendArea>
+                <TrendAreaVue></TrendAreaVue>
             </div>
         </div>
     </div>
@@ -39,5 +39,5 @@
 }
 </style>
 <script setup>
-import TrendArea from '@/views/Home/TrendArea.vue';
+import TrendAreaVue from './TrendArea.vue';
 </script>

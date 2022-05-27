@@ -30,7 +30,7 @@ function like(x) {
 }
 var post = ref([]);
 onMounted(() => {
-    apiConnection.getWantsToTrend().then((x) => { post.value = x.data; console.log(x.data); }).catch(function (err) { post.value = false; });
+    apiConnection.getWantsToTrend().then((x) => { post.value = x.data; }).catch(function (err) { post.value = false; });
 
 })
 

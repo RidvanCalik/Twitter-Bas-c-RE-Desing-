@@ -1,17 +1,16 @@
 <script setup>
-import { ref, computed, onMounted, defineAsyncComponent } from 'vue';
-import { RouterLink, RouterView } from 'vue-router'
+import { onMounted, defineAsyncComponent } from 'vue';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import HeaderArea from '@/views/Home//HeaderArea.vue';
 import LoadingSpinnerVue from '@/components/LoadingSpinner.vue';
-import apiConnection from '@/apiConnection';
-var TrendArea = defineAsyncComponent(() => import('@/views/Home/TrendArea.vue'));
-var MainArea = defineAsyncComponent(() => import('@/views/Home/MainArea.vue'));
-
+import apiConnection from '../../apiConnection.js';
+import TrendArea from '@/views/Home/TrendArea.vue';
+import MainArea from '@/views/Home/MainArea.vue';
 
 onMounted(function () {
-
+  //kullanıcı kotnrolü
   apiConnection.isConnection().then(function (x) { console.log(x); });
 });
 
@@ -19,32 +18,32 @@ onMounted(function () {
 </script>
 
 <template >
-  <Suspense>
 
+  <div class="row h-100 ">
 
-    <div class="row h-100 ">
+    <div class=" d-none d-md-block col-md-2 ">
 
-      <div class=" d-none d-md-block col-md-2 ">
-        <TrendArea>
+      <TrendArea></TrendArea>
 
-        </TrendArea>
+    </div>
+
+    <div class=" col-12 col-md-10 ">
+      <div class="row" id="headerArea">
+
+        <HeaderArea></HeaderArea>
+
       </div>
+      <div class="row" id="mainArea">
 
-      <div class=" col-12 col-md-10 ">
-        <div class="row" id="headerArea">
 
-          <HeaderArea></HeaderArea>
-        </div>
-        <div class="row" id="mainArea">
-          <MainArea></MainArea>
-        </div>
+        <MainArea></MainArea>
+
       </div>
     </div>
 
-    <template #fallback>
-      <LoadingSpinnerVue></LoadingSpinnerVue>
-    </template>
-  </Suspense>
+  </div>
+
+
 
 
 
