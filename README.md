@@ -1,5 +1,16 @@
 # Twitter clone with Vue but this better than :)
 
+(it's still demo. I say don't expect much) Whatever  
+
+
+- **Vue.JS used for Inputs**  
+- **Vuex used for user data and error messages**  
+- **Vue Router for routing**  
+- **I tried to make Rest API (maybe ı did ı don't know)**  
+- **IMG source https://randomuser.me**  
+- **Already you know why ı used Bootstrap**  
+
+
 
 Screanshoots and Video of project;
 
