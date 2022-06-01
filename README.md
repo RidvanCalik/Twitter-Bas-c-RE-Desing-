@@ -2,7 +2,11 @@
 
 
 Screanshoots and Video of project;
-![video](./TwitterClone.mp4)
+
+
+https://user-images.githubusercontent.com/31798185/171513441-49416d1d-d2e7-421b-8f85-b216356e2351.mp4
+
+
 ![ss1](./ss1.png)
 
 
