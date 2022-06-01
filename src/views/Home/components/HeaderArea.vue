@@ -7,7 +7,7 @@
             <h2><i class="bi bi-list "></i></h2>
         </button>
         <div class="w-100 justify-content-center d-flex">
-            <div class="input-group   w-50 ">
+            <div class="input-group   w-75 ">
 
                 <input type="text" class="form-control rounded-pill p-2 text-center shadow " placeholder="Ara"
                     aria-describedby="basic-addon1">
@@ -15,15 +15,7 @@
             </div>
         </div>
     </div>
-    <!--modal trends for mobile-->
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog  modal-dialog-centered">
-            <div class="modal-content">
-                <TrendAreaVue></TrendAreaVue>
-            </div>
-        </div>
-    </div>
 </template>
 
 <style>
@@ -39,5 +31,4 @@
 }
 </style>
 <script setup>
-import TrendAreaVue from './TrendArea.vue';
 </script>

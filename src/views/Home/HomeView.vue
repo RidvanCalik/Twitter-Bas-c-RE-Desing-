@@ -1,17 +1,18 @@
 <script setup>
-import { onMounted, defineAsyncComponent } from 'vue';
+import { onMounted } from 'vue';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import HeaderArea from '@/views/Home//HeaderArea.vue';
-import LoadingSpinnerVue from '@/components/LoadingSpinner.vue';
+
 import apiConnection from '../../apiConnection.js';
-import TrendArea from '@/views/Home/TrendArea.vue';
-import MainArea from '@/views/Home/MainArea.vue';
+import HeaderArea from '@/views/Home/components/HeaderArea.vue';
+import TrendArea from '@/views/Home/components/TrendArea.vue';
+import MainArea from '@/views/Home/components/MainArea.vue';
+import UserPanelArea from '@/views/Home/components/UserPanelArea.vue';
 
 onMounted(function () {
   //kullanıcı kotnrolü
-  apiConnection.isConnection().then(function (x) { console.log(x); });
+  apiConnection.isConnection().then(function (x) { });
 });
 
 
@@ -21,17 +22,13 @@ onMounted(function () {
 
   <div class="row h-100 ">
 
-    <div class=" d-none d-md-block col-md-2 ">
-
+    <div class="col-md-3  ">
       <TrendArea></TrendArea>
-
     </div>
 
-    <div class=" col-12 col-md-10 ">
+    <div class=" col-md-6 ">
       <div class="row" id="headerArea">
-
         <HeaderArea></HeaderArea>
-
       </div>
       <div class="row" id="mainArea">
 
@@ -39,6 +36,10 @@ onMounted(function () {
         <MainArea></MainArea>
 
       </div>
+    </div>
+    <div class=" col-md-3">
+      <UserPanelArea></UserPanelArea>
+
     </div>
 
   </div>

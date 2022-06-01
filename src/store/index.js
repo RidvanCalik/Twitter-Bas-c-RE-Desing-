@@ -1,7 +1,12 @@
-import { createStore } from 'vuex'
+import { createStore } from 'vuex';
+
 
 const state = {
     count: 0,
+    errMessage: [
+        "kullanıcı adı veya Şifre hatalı",
+        "Sunucuya Bağlanamadı",
+    ],
     user: {}
 }
 

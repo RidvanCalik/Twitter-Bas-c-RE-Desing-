@@ -2,16 +2,18 @@
     "users": [
         {
             "userID": "123",
-            "userName": "Ayşe",
+            "userName": "Ayşe Şaşmaz",
             "userPass": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+            "userImg": "https://randomuser.me/api/portraits/women/31.jpg",
             "userPosts": [
                 "1"
             ]
         },
         {
             "userID": "124",
-            "userName": "Mehmet",
+            "userName": "Mehmet Ali Sungur",
             "userPass": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+            "userImg": "https://randomuser.me/api/portraits/men/47.jpg",
             "userPosts": [
                 "2",
                 "3"
@@ -19,8 +21,18 @@
         },
         {
             "userID": "125",
-            "userName": "Zeynep",
+            "userName": "Zeynep Korkmaz",
             "userPass": "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5",
+            "userImg": "https://randomuser.me/api/portraits/women/61.jpg",
+            "userPosts": [
+                "5"
+            ]
+        },
+        {
+            "userID": "126",
+            "userName": "Kemal Düşünür",
+            "userPass": "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5",
+            "userImg": "https://randomuser.me/api/portraits/men/78.jpg",
             "userPosts": [
                 "5"
             ]
@@ -29,37 +41,100 @@
     "posts": [
         {
             "postID": "1",
-            "postUserID": "Ayşe",
+            "postUserID": "123",
             "postTag": [
-                "Tech",
-                "Boomer"
+                "AltınGünü"
             ],
-            "post": "Damn this teaching hard for human"
+            "post": "KEEP CALM AND EAT KISIR"
         },
         {
             "postID": "2",
-            "postUserID": "Mehmet",
+            "postUserID": "124",
             "postTag": [
-                "November",
-                "Jahrein",
-                "yutube"
+                "YKS",
+                "ÖSYM"
             ],
-            "post": "Damn this teaching hard for human"
+            "post": "Arkadaş YKS'ye son 15 gün kalmış dedi Şaka yaptı sandım... Yapmıyormuş"
         },
         {
             "postID": "3",
-            "postUserID": "Mehmet",
-            "postTag": [
-                "Tech",
-                "Jahrein"
-            ],
-            "post": "Ha Ha yazılım öğrenseydin"
+            "postUserID": "124",
+            "postTag": [],
+            "post": "Soğuk bir günde snowpiercer izleme keyfi..."
         },
         {
             "postID": "4",
-            "postUserID": "Zeynep",
-            "postTag": [],
+            "postUserID": "125",
+            "postTag": [
+                "2023"
+            ],
             "post": "Bruh"
+        },
+        {
+            "postID": "5",
+            "postUserID": "123",
+            "postTag": [
+                "Yorgun"
+            ],
+            "post": "Ekmek almaya üşenip kardeşimi yollarken olur gibi"
+        },
+        {
+            "postID": "6",
+            "postUserID": "124",
+            "postTag": [
+                "Sabahın3ü"
+            ],
+            "post": "Uyuyamayanlar?"
+        },
+        {
+            "postID": "8",
+            "postUserID": "126",
+            "postTag": [
+                "Crysis4"
+            ],
+            "post": "Yok mu RTX3090'da 40fps ???"
+        },
+        {
+            "postID": "9",
+            "postUserID": "123",
+            "postTag": [],
+            "post": "Lorem İpsum"
+        },
+        {
+            "postID": "10",
+            "postUserID": "123",
+            "postTag": [],
+            "post": "Lorem İpsum"
+        },
+        {
+            "postID": "11",
+            "postUserID": "123",
+            "postTag": [],
+            "post": "Lorem İpsum"
+        },
+        {
+            "postID": "12",
+            "postUserID": "123",
+            "postTag": [],
+            "post": "Lorem İpsum"
+        },
+        {
+            "postID": "13",
+            "postUserID": "123",
+            "postTag": [],
+            "post": "Lorem İpsum"
+        },
+        {
+            "postID": "14",
+            "postUserID": "123",
+            "postTag": [],
+            "post": "Lorem İpsum"
+        },
+        {
+            "postID": "15",
+            "postUserID": "123",
+            "postTag": [],
+            "post": "Lorem İpsum"
         }
     ]
 }

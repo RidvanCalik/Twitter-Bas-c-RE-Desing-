@@ -1,9 +1,9 @@
 <template>
-    <div class=" myLogin">
+    <div class=" myLogin h-100 w-100 d-flex justify-content-center align-items-center flex-column">
         <div class="alert alert-danger m-3 p-3" v-if="err" role="alert">
-            Kullanıcı Adı veya Şifre hatalı
+            {{ errMessage }}
         </div>
-        <div class="col-10 col-md-4 h-50 card shadow p-4 justify-content-around">
+        <div class="col-10 col-sm-6 col-md-4 h-50 card shadow p-4 justify-content-around">
 
             <div class="card-title text-center">Gİriş yap</div>
             <div class="input-group  ">
@@ -31,36 +31,40 @@ import router from '../../router';
 const store = useStore();
 
 var err = ref(false);
+var errMessage = ref();
 var UserName = ref();
 var Pass = ref();
 
 function login() {
+    apiConnection.isConnection().then((e) => {
+        if (!e) {
+            err.value = true;
+            errMessage.value = store.state.errMessage[1];
+        } else {
+            apiConnection.loginUser(UserName.value, Pass.value).then(
 
-    console.log(store.state);
-    apiConnection.loginUser(UserName.value, Pass.value).then(
-        function (e) {
+                function (e) {
 
-            if (e) {
-                console.log("store eklendi");
-                store.commit("setUser", ...e);
-                router.push({ name: 'Home' });
-            } else {
-                err.value = true;
-            }
+                    if (e) {
+                        console.log("store eklendi");
+                        store.commit("setUser", ...e);
+                        router.push({ name: 'Home' });
+                    } else {
+                        err.value = true;
+                        errMessage.value = store.state.errMessage[0];
+                    }
 
+                }
+            ).catch((err) => { console.log(err) });
         }
-    )
+    });
+
+
+
+
+
+
 }
 
 </script>
 
-<style>
-.myLogin {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-</style>
