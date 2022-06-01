@@ -1,7 +1,8 @@
 # Twitter clone with Vue but this better than :)
 
 
-Screanshoots of porject login page;
+Screanshoots and Video of project;
+![video](./TwitterClone.mp4)
 ![ss1](./ss1.png)
 
 
