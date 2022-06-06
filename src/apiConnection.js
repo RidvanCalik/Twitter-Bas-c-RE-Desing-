@@ -42,7 +42,7 @@ var apiConnection = {
             return axios.get(this.apiUrl + "/posts").then((x) => { return x; });
         }
 
-    }
+    },
 }
 
 

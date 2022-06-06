@@ -1,19 +1,26 @@
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import apiConnection from '../../apiConnection.js';
 import HeaderArea from '@/views/Home/components/HeaderArea.vue';
 import TrendArea from '@/views/Home/components/TrendArea.vue';
 import MainArea from '@/views/Home/components/MainArea.vue';
 import UserPanelArea from '@/views/Home/components/UserPanelArea.vue';
+import store from '../../store/index.js';
+import router from '../../router/index.js';
+
+
 
 onMounted(function () {
   //kullanıcı kotnrolü
-  apiConnection.isConnection().then(function (x) { });
+  if (!store.getters.getUser) {
+    router.push(`/?err=${store.state.errMessage[2]}`)
+  }
+
 });
+var errMesage = ref("");
 
 
 </script>
@@ -31,8 +38,6 @@ onMounted(function () {
         <HeaderArea></HeaderArea>
       </div>
       <div class="row" id="mainArea">
-
-
         <MainArea></MainArea>
 
       </div>

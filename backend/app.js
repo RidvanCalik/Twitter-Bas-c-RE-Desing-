@@ -29,9 +29,13 @@ app.get('/api/users', cors(corsOptions), (request, response) => {
         )
         return user;
     }
+
     findUser(request.query.UserName, request.query.Password).then((e) => response.json(e));
 
+
+
 })
+
 app.post('/api/users', cors(corsOptions), (request, response) => {
 
     async function userİsAvaible(UserNM) {

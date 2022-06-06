@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { useStore } from 'vuex';
 import apiConnection from '../../apiConnection';
 import router from '../../router';
@@ -34,7 +34,14 @@ var err = ref(false);
 var errMessage = ref();
 var UserName = ref();
 var Pass = ref();
+onMounted(() => {
+    let myUrl = new URLSearchParams(window.location.search);
+    if (myUrl.get("err")) {
+        err.value = true;
+        errMessage.value = myUrl.get("err");
+    }
 
+})
 function login() {
     apiConnection.isConnection().then((e) => {
         if (!e) {
